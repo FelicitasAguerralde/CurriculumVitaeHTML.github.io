@@ -1,0 +1,209 @@
+:root{
+    --primary:#f4d644;
+    --secondary: #2a2e36;
+    --tertiary:#ffff;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, .education p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    color: var(--tertiary);
+}
+
+h1{
+    font-size: 54px;
+    color: var(--secondary)
+}
+
+h1, h2, h3, h4{
+    margin: 0%;
+}
+
+h2{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 22px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+.education p{
+    font-size: 16px;
+}
+
+.rightColum h1, .rightColum h2, .rightColum h3, .rightColum h4{
+    color: var(--secondary);
+}
+
+.leftColum p{
+    color: var(--tertiary);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.leftColum{
+    width: 30%;
+    background-color: var(--secondary);
+    padding-top: 8%;
+    padding-left: 5%;
+    display: block;
+}
+
+.rightColum{
+    width: 70%;
+    height: 100%;
+    background-color: var(--tertiary);
+}
+
+.leftColum, .rightColum{
+    padding-bottom: 50px;
+}
+
+/*----------------Left------------------*/
+
+.photo{
+    background-color: var(--tertiary);
+    width: 220px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(244, 232, 232, 0.2);
+}
+.photo img{
+    width: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:20px;
+    margin-right: 10px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+.itemImg{
+    background-color: var(--primary);
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.itemImg img{
+    width: 20px;
+    height: 20px;   
+}
+
+.line{
+    background-color: var(--primary);
+    width: 95%;
+    padding-left: 5%;
+    height: 2px;
+}
+
+.itemEducation{
+    margin-bottom: 20px;
+}
+.itemEducation p{
+    margin-top: 2px;
+}
+section{
+    position: relative;
+}
+
+section h2, section h3, section , section p{
+    margin-bottom: 5px;
+}
+section h3{
+    margin-top: 30px;
+}
+
+section h2{
+    margin-top: 40px;
+}
+
+/*------------------Right-----------------*/
+.portada{
+    background-color: var(--primary);
+    width: 80%;
+    height: 190px;
+    position: absolute;
+    top: 180px;
+    left: 295px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.portada h1{
+    margin-top: 40px;
+    margin-left: 220px;
+    }
+
+
+.portada h3{
+    margin-top: 10px;
+    margin-left: 220px;
+    font-size: 30px;
+}
+
+.informationColumRight{
+    margin-top: 450px;
+    margin-left: 60px;
+}
+
+.informationColumRight h2{
+    text-transform: none;
+    margin-top: 10px;
+}
+
+.informationColumRight h3, .informationColumRight h4, .informationColumRight p{
+    color:#2a2e36c1;
+    margin-top: 2px;
+}
+.experience{
+    position: relative;
+}
+
+.itemExperience{
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.informationColumRight .line{
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.iconSkills{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+.iconSkills img{
+    width: 40px;
+    height: 40px;
+}
+
+.skills.softSkills{
+    margin-bottom: 5px;
+}
