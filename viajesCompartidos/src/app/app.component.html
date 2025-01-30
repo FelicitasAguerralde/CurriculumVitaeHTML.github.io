@@ -1,0 +1,40 @@
+<header>
+<img src="./assets/img/autoRuta.jpg"style="width:100%;">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand" aria-current="page" [routerLink]="['/home']">{{title}}<img src="./assets/img/ruta26.png" alt="logo_ruta26" class="float-start rounded"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/viajes']">{{viajes}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/automoviles']">{{automoviles}} </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/about']">{{about}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1 class="text-center fs-2 fst-italic ms-5 mt-5 mb-5">"La única regla del viaje es: No vuelvas como te fuiste.
+  Vuelve diferente."</h1>
+</header>
+
+<!-- inicio main container -->
+<main>
+<div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+<div class="card">
+  <footer>
+     {{footer}}
+  </footer>
+</div>

@@ -1,0 +1,34 @@
+<div class="modal-body">
+    <h1 class="fs-5 fw-bold ms-5 mt-5">Viajes disponibles</h1>
+    <hr>
+    <table class='table  table-striped text-center m-0 mb-1'>
+        <thead class="table-dark text-center fw-bold text-warning">
+            <tr>
+                <th>Usuario</th>
+                <th>Salida</th>
+                <th>Destino</th>
+                <th>Día</th>
+                <th>Horario</th>
+                <th>Lugares</th>
+                <th>Mascota</th>
+                <th>Precio</th>
+                <th>Disponible</th>
+                <th>Reservar lugares</th>  
+            <tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let viaje of viajes" [ngClass]="{'disponible':viaje.disponible}">
+                <td><img width="50" class="img.thumbnail" [src]="viaje.images" [alt]="viaje.salida"></td>
+                <td>{{viaje.salida}}</td>
+                <td>{{viaje.destino}}</td>
+                <td>{{viaje.dia}}</td>
+                <td>{{viaje.horario}}</td>
+                <td>{{viaje.lugares}}</td>
+                <td>{{viaje.mascota}}</td>
+                <td>{{viaje.precio | currency}}</td>
+                <td><span class="input-group" *ngIf="viaje.disponible==true">Disponible</span></td>
+                <td><app-input-integer [(quantity)]="viaje.quantity" [max]="viaje.lugares"></app-input-integer>
+                <button type="button" class="btn btn-light" (click)="addToCart(viaje)" *ngIf="viaje.disponible==true">Reservar</button></td>
+            </tr>
+            </tbody>
+    </table>

@@ -1,0 +1,10 @@
+input{
+    width: 30px;
+    justify-content: space-around;
+    border:none;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.066);
+}
+td{
+    vertical-align: middle;
+}

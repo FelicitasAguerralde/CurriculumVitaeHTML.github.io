@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    margin: 2%;
+}
+.card{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
