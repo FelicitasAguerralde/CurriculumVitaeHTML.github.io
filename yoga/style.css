@@ -1,0 +1,365 @@
+:root{
+    --primary: #CB899D;
+    --secondary: #699C86;
+    --terciary: #CFDB93;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #cfdb935e, #cb899d3a);;
+}
+h1, h2, h3, table, form, .fieldsetEdit, footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bolder;
+    font-size: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+aside {
+    text-align: center;
+}
+
+/*------------------------------Header------------------------------------------*/
+header {
+    background-image: url(img/portada.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+nav {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+/*------------------------------Barra NAV------------------------------------------*/
+
+ul.barra_nav {
+    display: none;
+    flex-direction: column;
+}
+
+ul.barra_nav.show, .menu {
+    display: flex;
+}
+
+nav ul li {
+    margin: 2%;
+}
+
+a {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100%;
+    color: rgb(136, 157, 16);
+}
+
+.descripcionSitio img {
+    display: none;
+}
+
+/*------------------------------Tabla------------------------------------------*/
+table p {
+    font-size: 70%;
+    text-align: justify;
+}
+
+thead {
+    font-weight: bolder;
+    text-transform: capitalize;
+    background-color: var(--terciary);
+}
+
+table td {
+    border: solid 1px;
+    background-color: white;
+    border-color: var(--secondary);
+    font-size: 1rem;
+}
+
+
+/*------------------------------Formulario------------------------------------------*/
+form {
+    font-size: 100%;
+    text-align: center;
+
+}
+
+form .formulario {
+    background-color: rgba(82, 121, 204, 0.178);
+    margin: auto;
+    text-align: left;
+}
+
+.captcha {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #699c862b;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 1rem;
+}
+
+#textoCaptcha{
+    background-color: #699C86;
+    padding: 0.3rem;
+}
+
+#mensajeCaptcha{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    background-color: var(--terciary);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    font-weight: bolder;
+}
+.oculto {
+    display: none;
+}
+
+fieldset {
+    border: solid, 1px;
+    text-align: justify;
+    font-size: small;
+}
+
+.span{
+    border: none;
+    background-color: transparent;
+    padding: 0.2rem;
+}
+
+.btnEdit{
+    background-color: green;
+    color: white;
+}
+
+.btnEliminar{
+    background-color: red;
+    color: white
+}
+
+.admin{
+    padding: 2rem;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.382);
+}
+/*------------------------------Pie de pagina------------------------------------------*/
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80%;
+    font-style: oblique;
+    text-align: center;
+    color: rgba(12, 11, 11, 0.555);
+}
+
+footer p {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+/*------------------------------Para pantallas superiores a 320px--------------------- */
+
+@media only screen and (min-width: 600px) {
+
+    h1, h2, h3, form{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        font-size: 2rem;
+        text-align: center;
+        color: var(--secondary)
+    }
+
+
+    h3 {
+        text-transform: none;
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--primary)
+    }
+
+    p {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        text-align: justify;
+        font-size: 100%;
+        line-height: 200%;
+        color: rgba(31, 31, 31, 0.855);
+    }
+
+    article, section{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    li a {
+        text-decoration: none;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        color: var(--terciary);
+        padding: 0.2rem;
+    }
+
+    /*------------------------------Header------------------------------------------*/
+    header {
+        background-image: url(img/portada.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+    }
+
+    /*------------------------------Barra NAV------------------------------------------*/
+
+    header h1{
+        position: absolute;
+        top: 15rem;
+        right: 50rem;
+    }
+
+    nav {
+        height: 3rem;
+        background-color: var(--primary); 
+        text-align: center; 
+        margin: 0%;
+        padding-top: 0.5rem;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+
+    }
+    
+    nav ul {
+        list-style: none; 
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+
+    ul.barra_nav {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+    }
+
+    .main {
+        display: block;
+        flex-direction: row;
+        align-content: space-around;
+    }
+
+
+    /*------------------------------Section------------------------------------------*/
+    .descripcionSitio img {
+        display: block;
+    }
+
+    .descripcionSitio {
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+    }
+
+    /*------------------------------Tabla------------------------------------------*/
+    table {
+        margin: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+    }
+
+    tr td {
+        font-size: 1.2rem;
+    }
+
+    form {
+        margin-bottom: 4%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    /*------------------------------Formulario------------------------------------------*/
+    .formulario {
+        margin: 10px;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        font-weight: bold;
+    }
+    
+
+    footer {
+        margin-bottom: 0.2rem;
+        margin: 0.2rem;
+    }
+
+    li {
+        list-style: none;
+        font-family: 'Courier New', Courier, monospace;
+        color: rgba(0, 0, 0, 0.681);
+        size: 20%;
+        background-color: transparent;
+        border: 10 px;
+        margin: 10px;
+        border-style: none;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .botonera{
+        margin-top: 2%;
+    }
+
+    /*------------------------------Sidebar------------------------------------------*/
+    .actividades {
+        display: flex;
+        flex-direction: row;
+        margin: 2%;
+        text-align: center;
+    }
+
+    /*------------------------------Pie de pagina------------------------------------------*/
+    footer {
+        margin-top: 5%;
+    }
+
+    footer p {
+        margin: auto;
+    }
+}
