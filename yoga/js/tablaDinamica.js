@@ -47,13 +47,16 @@ async function enviar(evento) {
     evento.preventDefault();                        //evita que se recargue la pagina
     let nombreIngresado = document.querySelector("#nombre").value;  //busco el valor de cada input ingresado por el usauario
     let telefonoIngresado = document.querySelector("#telefono").value;
+    let diaIngresado = document.querySelector("#dia").value;
     let horarioIngresado = document.querySelector("#horario").value;
-    let comentarioIngresado = document.querySelector("#consulta").value;
+    let comentarioIngresado = document.querySelector("#comentario").value;
+
     let renglon = {                                 //guardo todo en un arreglo
         "nombre": nombreIngresado,
         "telefono": telefonoIngresado,
+        "dia": dia,
         "horario": horarioIngresado,
-        "consulta": comentarioIngresado
+        "comentario": comentarioIngresado
     }
 
     try {
