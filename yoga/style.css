@@ -7,6 +7,57 @@ body{
     --terciary: #CFDB93;
 }
 
+/*------------------------------ Animaciones Globales ------------------------------------------*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/*------------------------------ Navbar Sticky con animación al hacer scroll ------------------------------------------*/
+nav {
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav.scrolled {
+    background-color: var(--secondary);
+}
+
+/*------------------------------ Animación Fade-in para encabezados y párrafos ------------------------------------------*/
+h1, h2, h3, p, table, form, .fieldsetEdit, footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*------------------------------ Efecto Hover para botones ------------------------------------------*/
+button, .btnEdit, .btnEliminar {
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover, .btnEdit:hover, .btnEliminar:hover {
+    animation: scaleButton 0.2s alternate ease-in-out;
+    background-color: var(--secondary);
+}
+
+/*------------------------------ Animación en Captcha ------------------------------------------*/
+#mensajeCaptcha {
+    animation: blink 1.5s infinite;
+}
+
+
 body{
     background-image: linear-gradient(to bottom, #D4E2DE, #FFF9F0);;
 }
@@ -54,6 +105,8 @@ header {
 nav {
     margin-top: 30px;
     margin-left: 80px;
+    position: sticky;
+    top: 0;
 }
 
 /*------------------------------Barra NAV------------------------------------------*/
@@ -271,7 +324,12 @@ li {
         padding-left: 10%;
         padding-right: 10%;
         display: flex;
+    }
 
+    nav img{
+        position: absolute;
+        top: 0rem;
+        right: 85rem;
     }
     
     nav ul {
