@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 :root{
     --primary: #CB899D;
@@ -31,9 +32,14 @@ body{
 /*------------------------------ Navbar Sticky con animación al hacer scroll ------------------------------------------*/
 nav {
     transition: background-color 0.3s ease-in-out;
+    background-color: var(--secondary);
 }
 
 nav.scrolled {
+    background-color: #699c8696;
+}
+
+nav:hover{
     background-color: var(--secondary);
 }
 
@@ -224,7 +230,7 @@ fieldset {
 .admin{
     padding: 2rem;
     margin: 0;
-    background-color: #d2ae797d;
+    background-color: #699c862b;
 }
 /*------------------------------Pie de pagina------------------------------------------*/
 footer {
@@ -246,9 +252,12 @@ li {
 /*------------------------------Para pantallas superiores a 320px--------------------- */
 
 @media only screen and (min-width: 600px) {
+    body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 
     h1, h2, h3, form{
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     h1 {
@@ -307,6 +316,11 @@ li {
         margin: 0%;
     }
 
+    header.paginasSecundarias{
+        width: 0;
+        height: 0;
+        background: none;
+    }
     /*------------------------------Barra NAV------------------------------------------*/
 
     header h1{
@@ -404,8 +418,7 @@ li {
 
     li {
         list-style: none;
-        font-family: 'Courier New', Courier, monospace;
-        color: rgba(0, 0, 0, 0.681);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         size: 20%;
         background-color: transparent;
         border: 10 px;

@@ -41,17 +41,22 @@ async function mostrarTabla() {
 }
 
 //----------------------funcion enviar------------------
-let btn_enviar = document.querySelector("#enviar"); //llamo al btn enviar
-btn_enviar.addEventListener("click", enviar);       //click, enviar
+let btn_enviar = document.querySelector("#enviar");
+btn_enviar.addEventListener("click", enviar);
 async function enviar(evento) {
-    evento.preventDefault();                        //evita que se recargue la pagina
-    let nombreIngresado = document.querySelector("#nombre").value;  //busco el valor de cada input ingresado por el usauario
+    evento.preventDefault();
+    let nombreIngresado = document.querySelector("#nombre").value;
     let telefonoIngresado = document.querySelector("#telefono").value;
     let diaIngresado = document.querySelector("#dia").value;
     let horarioIngresado = document.querySelector("#horario").value;
     let comentarioIngresado = document.querySelector("#comentario").value;
 
-    let renglon = {                                 //guardo todo en un arreglo
+    if (!nombreIngresado || !telefonoIngresado || !diaIngresado || !horarioIngresado) {
+        alert("Por favor, complete todos los campos obligatorios antes de enviar el formulario.");
+        return;
+    }
+
+    let renglon = {
         "nombre": nombreIngresado,
         "telefono": telefonoIngresado,
         "dia": dia,
@@ -83,13 +88,6 @@ async function enviar(evento) {
     }
 
 }
-let btn_enviarX3 = document.querySelector("#enviartresveces");  //llamo al foton enviarx3
-btn_enviarX3.addEventListener("click", async function(e){   
-    console.log("funciona");    //al hacer click llamo a la funcion anonima que itera tres veces la funcione enviar
-     for (let i=0; i<3; i++){
-        setTimeout( await enviar(e), 500); //temporalizar la ejecución de una función, espera medio segundo. 
-     }                                     //un segundo son 1000 milisegundos
-});
 
 //----------------------funcion eliminar------------------
 
