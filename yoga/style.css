@@ -267,7 +267,6 @@ li {
     }
 
     h2 {
-        text-transform: capitalize;
         font-size: 2rem;
         text-align: center;
         color: var(--secondary)
