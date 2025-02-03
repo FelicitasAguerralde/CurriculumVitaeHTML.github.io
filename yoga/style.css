@@ -1,7 +1,7 @@
-body{
-    margin: 0;
+*{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 :root{
     --primary: #CB899D;
     --secondary: #699C86;
@@ -67,6 +67,7 @@ button:hover, .btnEdit:hover, .btnEliminar:hover {
 body{
     background-image: linear-gradient(to bottom, #D4E2DE, #FFF9F0);;
 }
+
 h1, h2, h3, table, form, .fieldsetEdit, footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: none;
@@ -78,7 +79,17 @@ h3 {
     font-weight: bolder;
     font-size: 100%;
     text-align: center;
-    text-transform: uppercase;
+}
+
+header{
+    background-image: url(img/portada.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
 }
 
 header img{
@@ -101,12 +112,6 @@ aside {
     text-align: center;
 }
 
-/*------------------------------Header------------------------------------------*/
-header {
-    background-image: url(img/portada.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-}
 
 nav {
     margin-top: 30px;
@@ -239,6 +244,8 @@ footer {
     font-style: oblique;
     text-align: center;
     color: rgba(12, 11, 11, 0.555);
+    background-color: var(--secondary);
+    padding-top: 2rem;
 }
 
 footer p {
@@ -253,6 +260,7 @@ li {
 
 @media only screen and (min-width: 600px) {
     body{
+        margin: 0;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
