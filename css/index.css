@@ -29,7 +29,7 @@ body {
   grid-template-rows: 120px auto auto auto;
 }
 
-/*------------------------------Home---------------------------------*/
+/*------------------------------Header---------------------------------*/
 .header {
   grid-area: header;
   display: flex;
@@ -44,7 +44,7 @@ body {
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   position: relative;
   z-index: 1;
 }
@@ -52,6 +52,7 @@ body {
 .header p {
   font-size: 1rem;
   margin-top: 0.2rem;
+  font-weight: bold;
 }
 
 .header h1,
@@ -63,10 +64,12 @@ body {
   text-align: center;
 }
 
+/*----------------Nav-----------------*/
+
 nav {
   grid-area: nav;
   align-items: center;
-  background-color: var(--color-primary);
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
   height: 100%;
   padding: 0.5rem;
   position: sticky;
@@ -76,9 +79,9 @@ nav {
 
 nav a,
 nav p {
-  color: var(--color-text);
+  color: var(--color-secondary);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 nav a {
@@ -97,7 +100,18 @@ ul {
   margin: 0%;
 }
 
-/*-----------------------Sección de Proyectos-------------------*/
+a:hover{
+  color: var(--color-text);
+}
+/*-----------------------Proyects Section-------------------*/
+
+.content h2{
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+
+}
+
 .content {
   padding: 1rem 1rem;
   background: var(--color-background);
@@ -141,7 +155,11 @@ ul {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-primary);
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+}
+
+.card:hover .infoCard{
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
 }
 
 .infoCard h4 {
@@ -250,8 +268,8 @@ a {
     height: 1rem;
     padding-left: 0.2rem;
   }
-  UL {
-    padding-left: 15%;
-    padding-right: 15%;
+  ul {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }
