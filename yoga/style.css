@@ -8,7 +8,7 @@
     --terciary: #CFDB93;
 }
 
-/*------------------------------ Animaciones Globales ------------------------------------------*/
+/*------------------------------Global Animations------------------------------------------*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -29,10 +29,17 @@
     }
 }
 
-/*------------------------------ Navbar Sticky con animación al hacer scroll ------------------------------------------*/
+/*------------------------------Navbar Sticky and animation in scroll------------------------------------------*/
 nav {
     transition: background-color 0.3s ease-in-out;
     background-color: var(--secondary);
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 0 10px;
 }
 
 nav.scrolled {
@@ -43,12 +50,25 @@ nav:hover{
     background-color: var(--secondary);
 }
 
-/*------------------------------ Animación Fade-in para encabezados y párrafos ------------------------------------------*/
+.logo{
+    background-image: url(img/yoga.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/*--------------- Animation Fade-in in head and paragraph ----------------*/
+
 h1, h2, h3, p, table, form, .fieldsetEdit, footer {
     animation: fadeIn 1s ease-in-out;
 }
 
-/*------------------------------ Efecto Hover para botones ------------------------------------------*/
+/*--------------- Hover efect in buttons ----------------------*/
+
 button, .btnEdit, .btnEliminar {
     transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -58,7 +78,8 @@ button:hover, .btnEdit:hover, .btnEliminar:hover {
     background-color: var(--secondary);
 }
 
-/*------------------------------ Animación en Captcha ------------------------------------------*/
+/*--------------------- Captcha animation --------------------------*/
+
 #mensajeCaptcha {
     animation: blink 1.5s infinite;
 }
@@ -120,11 +141,16 @@ nav {
     top: 0;
 }
 
-/*------------------------------Barra NAV------------------------------------------*/
+/*-------------------- Nav -------------------*/
 
 ul.barra_nav {
     display: none;
     flex-direction: column;
+    margin: 0.5rem;
+}
+
+.barra_nav li:hover{
+    transform: scale(1.1);
 }
 
 ul.barra_nav.show, .menu {
@@ -146,7 +172,8 @@ a {
     display: none;
 }
 
-/*------------------------------Tabla------------------------------------------*/
+/*---------------- Table -------------------*/
+
 table p {
     font-size: 70%;
     text-align: justify;
@@ -166,7 +193,8 @@ table td {
 }
 
 
-/*------------------------------Formulario------------------------------------------*/
+/*----------------- Form ----------------*/
+
 form {
     font-size: 100%;
     text-align: center;
@@ -237,7 +265,8 @@ fieldset {
     margin: 0;
     background-color: #699c862b;
 }
-/*------------------------------Pie de pagina------------------------------------------*/
+/*----------------------- Footer ------------------*/
+
 footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 80%;
@@ -256,7 +285,7 @@ li {
     list-style: none;
 }
 
-/*------------------------------Para pantallas superiores a 320px--------------------- */
+/*------------------ Screen larger than 600px --------------------- */
 
 @media only screen and (min-width: 600px) {
     body{
@@ -311,7 +340,8 @@ li {
         padding: 0.2rem;
     }
 
-    /*------------------------------Header------------------------------------------*/
+    /*------------------------- Header  --------------------------*/
+
     header {
         background-image: url(img/portada.jpg);
         background-size: cover;
@@ -379,7 +409,7 @@ li {
     }
 
 
-    /*------------------------------Section------------------------------------------*/
+    /*------------------- Section --------------------------*/
     .descripcionSitio img {
         display: block;
     }
@@ -390,7 +420,7 @@ li {
         align-content: space-around;
     }
 
-    /*------------------------------Tabla------------------------------------------*/
+    /*------------------- Table ------------------------*/
     table {
         margin: auto;
         margin-bottom: 3%;
@@ -409,7 +439,7 @@ li {
         margin-right: 20%;
     }
 
-    /*------------------------------Formulario------------------------------------------*/
+    /*------------------ Form --------------------*/
     .formulario {
         margin: 10px;
         padding: 0.5rem;
@@ -438,7 +468,7 @@ li {
         margin-top: 2%;
     }
 
-    /*------------------------------Sidebar------------------------------------------*/
+    /*---------------- Sidebar ---------------------*/
     .actividades {
         display: flex;
         flex-direction: row;
@@ -446,7 +476,7 @@ li {
         text-align: center;
     }
 
-    /*------------------------------Pie de pagina------------------------------------------*/
+    /*---------------- Footer --------------------*/
     footer {
         margin-top: 5%;
         padding-bottom: 2rem;
