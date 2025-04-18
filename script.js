@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 navElement.addEventListener('mouseover', function() {
-  navElement.style.opacity = originalOpacity; // Vuelve a la opacidad original al pasar el ratón
-});
+  navElement.style.opacity = originalOpacity;
 
 navElement.addEventListener('mouseout', function() {
-  // Vuelve a opacar si el usuario ha scrolleado
+
   if (window.scrollY > 50) {
-    navElement.style.opacity = '0.7'; // Misma opacidad que al scrollear
+    navElement.style.opacity = '0.7';
   }
 });
-});
+})
+}
+);
