@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
-      navElement.style.opacity = '0.5';
+      navElement.style.opacity = '0.4';
     } else {
       navElement.style.opacity = originalOpacity;
     }
@@ -39,27 +39,28 @@ document.addEventListener('DOMContentLoaded', function() {
 const themeButton = document.querySelector('.theme-button');
 const themeDropdown = document.querySelector('.theme-dropdown');
 const themeLinks = document.querySelectorAll('.theme-dropdown-content a');
-const body = document.querySelector('.body');
-const section = document.querySelector('.content');
+const content = document.querySelectorAll('.theme');
 const title = document.querySelectorAll('.theme-title');
+const portada = document.querySelectorAll('.theme-shade');
 const sunIcon = document.querySelector('.theme-button .fa-sun');
 const themeIcon = document.querySelector('.theme-button i:first-child img');
+const card = document.querySelectorAll('.card');
 
 function setTheme(theme) {
-  body.classList.remove('light-theme', 'dark-theme');
-  section.classList.remove('light-theme', 'dark-theme');
+  content.forEach(b => b.classList.remove('light-theme', 'dark-theme'));
   title.forEach(t => t.classList.remove('light-theme', 'dark-theme'));
     if (theme === 'light') {
-        body.classList.add('light-theme');
-        section.classList.add('light-theme');
+        content.forEach(b => b.classList.add('light-theme'));
         title.forEach(t => t.classList.add('light-theme'));
+        card.forEach(c => c.classList.remove('dark-shade'));
         localStorage.setItem('theme', 'light');
         themeIcon.src = 'img/icons/sun.svg';
         themeIcon.alt = 'sun';
     } else if (theme === 'dark') {
-        body.classList.add('dark-theme');
-        section.classList.add('dark-theme');
+        content.forEach(b => b.classList.add('dark-theme'));
         title.forEach(t => t.classList.add('dark-theme'));
+        portada.forEach(p => p.classList.add('dark-shade'));
+        card.forEach(c => c.classList.add('dark-shade'));
         localStorage.setItem('theme', 'dark');
         themeIcon.src = 'img/icons/moon.svg';
         themeIcon.alt = 'moon';
