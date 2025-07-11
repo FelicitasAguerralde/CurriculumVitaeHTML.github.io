@@ -11,25 +11,30 @@
 
 <body>
     <header>
-        <h1>Yoga & Pilates</h1>
-        <img src="img/yoga.svg" alt="">
     </header>
     <nav class="scrolled">
         <div class="menu">
             <ul class="barra_nav">
-                <li><a href="index.html"><div class="logo"></div></a></li>
+                <li><a href="index.html">
+                        <div class="logo"></div>
+                    </a></li>
                 <li><a href="yoga.html">Yoga</a></li>
                 <li><a href="pilates.html">Pilates</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
+
     <article class="main">
         <h2>Yoga & Pilates: Tu espacio para la transformación</h2>
         <section class="descripcionSitio">
-            <div>                    
-                <p>En Yoga & Pilates, te invitamos a conectar con tu ser interior a través del movimiento consciente. Despierta tu cuerpo, aquieta tu mente y nutre tu espíritu con nuestras prácticas de yoga y pilates, diseñadas para llevarte a un estado de bienestar integral.</p>
-                <p>Descubre el poder de Pilates para fortalecer tu cuerpo desde adentro hacia afuera. Conecta tu mente con cada movimiento, esculpe tu figura, mejora tu postura y alivia dolores de espalda mientras encuentras tu centro y equilibrio interior.</p>
+            <div>
+                <p>En Yoga & Pilates, te invitamos a conectar con tu ser interior a través del movimiento consciente.
+                    Despierta tu cuerpo, aquieta tu mente y nutre tu espíritu con nuestras prácticas de yoga y pilates,
+                    diseñadas para llevarte a un estado de bienestar integral.</p>
+                <p>Descubre el poder de Pilates para fortalecer tu cuerpo desde adentro hacia afuera. Conecta tu mente
+                    con cada movimiento, esculpe tu figura, mejora tu postura y alivia dolores de espalda mientras
+                    encuentras tu centro y equilibrio interior.</p>
             </div>
         </section>
         <h3>Actividades y Horarios</h3>
@@ -94,16 +99,17 @@
                 <td>Taller ayurveda G6</td>
             </tr>
         </table>
+        <h3>Formulario de inscripción:</h3>
+        <div id="mensajeExito" class="mensaje-exito oculto"></div>
         <form id="formulario">
-            <h3>Formulario de inscripción:</h3>
-            <p>Formá parte de nuestro espacio. Inscribite ahora!!!</p>
             <div class="formulario">
-                <label for="nombre y apellido" >Nombre y Apellido: </label>
+                <label for="nombre y apellido">Nombre y Apellido: </label>
                 <input type="text" id="nombre" name="nombreApellido" value="" placeholder="Juan Perez" required />
             </div>
             <div class="formulario">
                 <label for="telefono">Celular:</label>
-                <input type="text" id="telefono" name="numeroTelefono" value="" placeholder="+54 249 4142356" required />
+                <input type="text" id="telefono" name="numeroTelefono" value="" placeholder="+54 249 4142356"
+                    required />
             </div>
             <div class="formulario">
                 <label for="dia">Día:</label>
@@ -129,50 +135,51 @@
                 <input type="text" id="comentario" name="comentario" value="" placeholder="Deje su comentario" />
             </div>
             <div class="captcha">
-            <p>Ingresá el siguiente código captcha para poder enviar el formulario:</p>
+                <p>Ingresá el siguiente código captcha para poder enviar el formulario:</p>
                 <label for="enviar" id="textoCaptcha"></label>
                 <input type="text" id="captcha" name="enviar" placeholder="Introducir números">
-                <button type="button" id="enviarCaptcha">Verificar</button>
+                <button class="btn" type="button" id="enviarCaptcha">Verificar</button>
                 <label for="enviar" id="mensajeCaptcha"></label>
                 <div class="botonera">
-                <button class="enviar" id="enviar" type="submit">Enviar Formulario</button>
+                    <button class="btn" id="enviar" type="submit">Enviar Formulario</button>
                 </div>
             </div>
         </form>
         <div class="admin">
-        <h3>Panel administrador</h3>
-        <form id="formEdit" class="oculto" action="">
-            <fieldset id="fieldsetEdit">
-                <h2>Modificar</h2>
-                <input id="inputEditId" type="hidden" name="id" required />
-                <label for="nombre">Nombre:</label>
-                <input id="inputEditNombre" type="text" name="nombre" required />
-                <label for="telefono">Tefono:</label>
-                <input id="inputEditTelefono" type="text" name="telefono" required />
-                <label for="horario">Horario:</label>
-                <input id="inputEditHorario" type="text" name="horario" required />
-                <label for="comentario">Comentario:</label>
-                <input id="inputEditComentario" type="text" name="comentario" required />
-                <button>Modificar</button>
-            </fieldset>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre y Apellido</th>
-                    <th>Número de contacto</th>
-                    <th>Horarios</th>
-                    <th>Comentario</th>
-                </tr>
-            </thead>
-            <tbody id="cuerpoTabla">
-            </tbody>
-        </table>
-    </div>
+            <h3>Panel administrador</h3>
+            <form id="formEdit" class="oculto" action="">
+                <fieldset id="fieldsetEdit">
+                    <h2>Modificar</h2>
+                    <input id="inputEditId" type="hidden" name="id" required />
+                    <label for="nombre">Nombre:</label>
+                    <input id="inputEditNombre" type="text" name="nombre" required />
+                    <label for="telefono">Tefono:</label>
+                    <input id="inputEditTelefono" type="text" name="telefono" required />
+                    <label for="horario">Horario:</label>
+                    <input id="inputEditHorario" type="text" name="horario" required />
+                    <label for="comentario">Comentario:</label>
+                    <input id="inputEditComentario" type="text" name="comentario" required />
+                    <button>Modificar</button>
+                </fieldset>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellido</th>
+                        <th>Número de contacto</th>
+                        <th>Horarios</th>
+                        <th>Comentario</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                </tbody>
+            </table>
+        </div>
     </article>
     <footer id="contacto">
         <p>Av. España 1234 - Tandil - Bs.As - Argentina</p>
         <p>(+54)249 15 41234 - yoga_pilates@gmail.com</p>
+        <p><a href="index.html"><img src="img/yoga.svg" alt="logo-yga" /></a></p>
         <p>Yoga&Pilates&#xa9 Un espacio de bienestar</p>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>

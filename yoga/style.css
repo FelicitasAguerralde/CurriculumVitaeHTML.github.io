@@ -1,488 +1,612 @@
-*{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 0%;
 }
 
-:root{
-    --primary: #CB899D;
-    --secondary: #699C86;
-    --terciary: #CFDB93;
+/* Paleta de rosas */
+:root {
+  --primary-color: #e94b8a;
+  --rosa-medio: #f47cb4;
+  --primary-color-light-1: #f9b6d2;
+  --primary-color-light-2: #fde4ef;
+  --primary-color-dark: #d72660;
+  --secondary: #699c8696;
+  --secondary-light: #699c;
 }
 
 /*------------------------------Global Animations------------------------------------------*/
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scaleButton {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
-
-/*------------------------------Navbar Sticky and animation in scroll------------------------------------------*/
-nav {
-    transition: background-color 0.3s ease-in-out;
-    background-color: var(--secondary);
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: flex-start;
-    padding: 0 10px;
-}
-
-nav.scrolled {
-    background-color: #699c8696;
-}
-
-nav:hover{
-    background-color: var(--secondary);
-}
-
-.logo{
-    background-image: url(img/yoga.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 3rem;
-    height: 3rem;
-    overflow: hidden;
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
-/*--------------- Animation Fade-in in head and paragraph ----------------*/
-
-h1, h2, h3, p, table, form, .fieldsetEdit, footer {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/*--------------- Hover efect in buttons ----------------------*/
-
-button, .btnEdit, .btnEliminar {
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-button:hover, .btnEdit:hover, .btnEliminar:hover {
-    animation: scaleButton 0.2s alternate ease-in-out;
-    background-color: var(--secondary);
-}
-
-/*--------------------- Captcha animation --------------------------*/
-
-#mensajeCaptcha {
-    animation: blink 1.5s infinite;
-}
-
-
-body{
-    background-image: linear-gradient(to bottom, #D4E2DE, #FFF9F0);;
-}
-
-h1, h2, h3, table, form, .fieldsetEdit, footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-transform: none;
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 h1,
 h2,
 h3 {
-    font-weight: bolder;
-    font-size: 100%;
-    text-align: center;
-}
-
-header{
-    background-image: url(img/portada.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 50rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
-}
-
-header img{
-    position: absolute;
-    top: 20rem;
-    right: 59rem;
-    width: 5rem;
-}
-
-footer h3{
-    color: var(--primary);
+  font-size: 24px;
+  padding: 2rem;
 }
 
 p {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
+  font-size: 16px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 1.6;
+}
+
+/*------------------------------ Header ------------------------------------------*/
+header {
+  width: 100%;
+  height: 10rem;
+  background-image: url("img/portada1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+}
+
+nav {
+  height: 3rem;
+  background-color: var(--rosa-medio); /* antes: var(--secondary) */
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li {
+  padding: 10px;
+}
+
+nav.scrolled {
+  background-color: var(--secondary);
+}
+
+nav:hover {
+  background-color: var(--secondary-light);
+}
+
+.logo {
+  background-image: url(img/yoga.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/*--------------- Animation Fade-in in head and paragraph ----------------*/
+
+h1,
+h2,
+h3,
+p,
+table,
+form,
+.fieldsetEdit,
+footer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/*--------------- Hover efect in buttons ----------------------*/
+
+button:hover,
+.btnEdit:hover,
+.btnEliminar:hover {
+  animation: scaleButton 0.2s alternate ease-in-out;
+}
+
+/*--------------------- Captcha animation --------------------------*/
+
+#mensajeCaptcha {
+  animation: blink 1.5s infinite;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #d4e2de, #fff9f0);
+  margin: 0%;
+}
+
+body,
+html {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bolder;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+footer h3 {
+  color: var(--primary);
 }
 
 aside {
-    text-align: center;
-}
-
-
-nav {
-    margin-top: 30px;
-    margin-left: 80px;
-    position: sticky;
-    top: 0;
-}
-
-/*-------------------- Nav -------------------*/
-
-ul.barra_nav {
-    display: none;
-    flex-direction: column;
-    margin: 0.5rem;
-}
-
-.barra_nav li:hover{
-    transform: scale(1.1);
-}
-
-ul.barra_nav.show, .menu {
-    display: flex;
-}
-
-nav ul li {
-    margin: 2%;
-}
-
-a {
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 100%;
-    color: rgb(136, 157, 16);
+  text-align: center;
 }
 
 .descripcionSitio img {
-    display: none;
+  display: none;
 }
 
 /*---------------- Table -------------------*/
 
 table p {
-    font-size: 70%;
-    text-align: justify;
+  text-align: justify;
 }
 
 thead {
-    font-weight: bolder;
-    text-transform: capitalize;
-    background-color: var(--terciary);
+  font-weight: bolder;
+  text-transform: capitalize;
+  background-color: var(--primary-color-light-1);
 }
 
-table td {
-    border: solid 1px;
-    background-color: white;
-    border-color: var(--secondary);
-    font-size: 1rem;
+table tr {
+  border: solid 1px var(--rosa-medio);
+  background-color: white;
+  border-color: var(--secondary);
+  font-size: 1rem;
 }
-
 
 /*----------------- Form ----------------*/
 
 form {
-    font-size: 100%;
-    text-align: center;
-
+  text-align: center;
 }
 
 form .formulario {
-    background-color: rgba(82, 121, 204, 0.178);
-    margin: auto;
-    text-align: left;
+  background-color: var(--primary-color-light-2);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: left;
 }
 
 .captcha {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #699c862b;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    margin-top: 2%;
-    gap: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  gap: 1rem;
 }
 
-#textoCaptcha{
-    background-color: #699C86;
-    padding: 0.3rem;
+#textoCaptcha {
+  background-color: var(--secondary);
+  padding: 0.3rem;
 }
 
-#mensajeCaptcha{
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#mensajeCaptcha {
+  color: red;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-button{
-    background-color: var(--terciary);
-    padding: 0.2rem;
-    border-radius: 0.2rem;
-    font-weight: bolder;
+.mensaje-correcto {
+  color: green !important;
+  font-weight: bold;
 }
+
+.mensaje-incorrecto {
+  color: red !important;
+}
+
+.mensaje-exito {
+  color: green !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+button .btn {
+  background-color: var(--primary-color-light-1);
+  color: var(--primary-color-dark);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
 .oculto {
-    display: none;
+  display: none;
 }
 
 fieldset {
-    border: solid, 1px;
-    text-align: justify;
-    font-size: small;
+  border: solid, 1px;
+  text-align: justify;
+  font-size: small;
 }
 
-.span{
-    border: none;
-    background-color: transparent;
-    padding: 0.2rem;
+.span button {
+  border: none;
+  background-color: transparent;
+  padding: 0.2rem;
+  width: 30px;
+  height: 30px;
 }
 
-.btnEdit{
-    background-color: green;
-    color: white;
+.btnEdit,
+.btnEliminar {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
 }
 
-.btnEliminar{
-    background-color: red;
-    color: white
+.btnEdit {
+  background-image: url(img/edit.svg);
+  width: 100%;
 }
 
-.admin{
-    padding: 2rem;
-    margin: 0;
-    background-color: #699c862b;
+.btnEliminar {
+  background-image: url(img/delete.svg);
+}
+
+.btnEdit,
+.btnEliminar {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.admin {
+  margin: 0;
+  background-color: var(--secondary);
+  background: var(--primary-color-light-2);
+  border: 2px solid var(--primary-color-light-1);
+  border-radius: 12px;
+  margin-bottom: 1em;
 }
 /*----------------------- Footer ------------------*/
 
 footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 80%;
-    font-style: oblique;
-    text-align: center;
-    color: rgba(12, 11, 11, 0.555);
-    background-color: var(--secondary);
-    padding-top: 2rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 2.5rem 0 1.5rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 0 -4px 24px 0 rgba(233, 75, 138, 0.1);
+  letter-spacing: 0.5px;
 }
 
 footer p {
-    text-align: center;
+  margin: 0.5rem 0;
+  color: white;
+  font-weight: 500;
+}
+
+footer p:last-child {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  font-style: italic;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-/*------------------ Screen larger than 600px --------------------- */
+section img {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-@media only screen and (min-width: 600px) {
-    body{
-        margin: 0;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+/*------------------ Screen larger than 768px --------------------- */
 
-    h1, h2, h3, form{
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+@media (min-width: 768px) {
+  .menu li a {
+    font-size: 20px;
+    color: white;
+  }
 
-    h1 {
-        text-transform: capitalize;
-        font-size: 3rem;
-        text-align: center;
-    }
+  aside li {
+    font-size: 20px;
+  }
 
-    h2 {
-        font-size: 2rem;
-        text-align: center;
-        color: var(--secondary)
-    }
+  h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+  }
 
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 32px;
+    text-align: center;
+  }
 
-    h3 {
-        text-transform: none;
-        font-size: 1.5rem;
-        text-align: center;
-        color: var(--primary)
-    }
+  h3 {
+    font-size: 32px;
+    text-transform: none;
+    text-align: center;
+  }
 
-    p {
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        text-align: justify;
-        font-size: 100%;
-        line-height: 200%;
-        color: rgba(31, 31, 31, 0.855);
-    }
+  p {
+    font-size: 18px;
+    text-align: justify;
+    color: rgba(31, 31, 31, 0.855);
+  }
 
-    article, section{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+  .actividades p {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 
-    li a {
-        text-decoration: none;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bolder;
-        font-size: 1.2rem;
-        color: var(--terciary);
-        padding: 0.2rem;
-    }
+  article,
+  section {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 
-    /*------------------------- Header  --------------------------*/
+  /*------------------------- Header  --------------------------*/
 
-    header {
-        background-image: url(img/portada.jpg);
-        background-size: cover;
-        width: 100%;
-        height: 50rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0%;
-    }
+  header {
+    width: 100%;
+    height: 30rem;
+    background-image: url("img/portada1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
 
-    header.paginasSecundarias{
-        width: 0;
-        height: 0;
-        background: none;
-    }
-    /*------------------------------Barra NAV------------------------------------------*/
+  nav {
+    height: 4rem;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* fondo semitransparente para contraste */
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
-    header h1{
-        position: absolute;
-        top: 15rem;
-        right: 50rem;
-    }
+  nav a {
+    color: #333;
+    font-weight: bold;
+  }
 
-    nav {
-        height: 3rem;
-        background-color: var(--primary); 
-        text-align: center; 
-        margin: 0%;
-        padding-top: 0.5rem;
-        padding-left: 10%;
-        padding-right: 10%;
-        display: flex;
-    }
+  nav a:hover {
+    color: var(--primary-color);
+  }
 
-    nav img{
-        position: absolute;
-        top: 0rem;
-        right: 85rem;
-    }
-    
-    nav ul {
-        list-style: none; 
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav li {
-        display: inline;
-        margin: 0 10px;
-    }
-    
+  header h1 {
+    position: absolute;
+    top: 15rem;
+    right: 50rem;
+  }
 
-    ul.barra_nav {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: space-between;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    .main {
-        display: block;
-        flex-direction: row;
-        align-content: space-around;
-    }
+  nav li {
+    display: inline;
+    margin: 0 10px;
+  }
 
+  ul.barra_nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+  }
 
-    /*------------------- Section --------------------------*/
-    .descripcionSitio img {
-        display: block;
-    }
+  /*------------------------------Barra NAV------------------------------------------*/
 
-    .descripcionSitio {
-        display: flex;
-        flex-direction: row;
-        align-content: space-around;
-    }
+  .main {
+    display: block;
+    flex-direction: row;
+    align-content: space-around;
+  }
 
-    /*------------------- Table ------------------------*/
-    table {
-        margin: auto;
-        margin-bottom: 3%;
-        width: 100%;
-        height: 20%;
-        text-align: center;
-    }
+  /*------------------- Section --------------------------*/
+  .descripcionSitio img {
+    display: block;
+  }
+  .section_a,
+  .section_b,
+  .section_c {
+    width: 28%;
+  }
 
-    tr td {
-        font-size: 1.2rem;
-    }
+  .descripcionSitio {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
 
-    form {
-        margin-bottom: 4%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
+  /*------------------- Table ------------------------*/
+  table {
+    margin: auto;
+    margin-bottom: 3%;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+  }
 
-    /*------------------ Form --------------------*/
-    .formulario {
-        margin: 10px;
-        padding: 0.5rem;
-        padding-left: 1rem;
-        font-weight: bold;
-    }
-    
+  tr td {
+    font-size: 1.2rem;
+  }
 
-    footer {
-        margin-bottom: 0.2rem;
-        margin: 0.2rem;
-    }
+  form {
+    margin-bottom: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
-    li {
-        list-style: none;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        size: 20%;
-        background-color: transparent;
-        border: 10 px;
-        margin: 10px;
-        border-style: none;
-        text-transform: capitalize;
-        text-align: center;
-    }
-    .botonera{
-        margin-top: 2%;
-    }
+  /*------------------ Form --------------------*/
+  .formulario {
+    margin: 10px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
+  }
 
-    /*---------------- Sidebar ---------------------*/
-    .actividades {
-        display: flex;
-        flex-direction: row;
-        margin: 2%;
-        text-align: center;
-    }
+  footer {
+    margin-bottom: 0.2rem;
+    margin: 0.2rem;
+  }
 
-    /*---------------- Footer --------------------*/
-    footer {
-        margin-top: 5%;
-        padding-bottom: 2rem;
-    }
+  .botonera {
+    margin-top: 2%;
+  }
 
-    footer p {
-        margin: auto;
-    }
+  /*---------------- Sidebar ---------------------*/
+  .actividades {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    text-align: center;
+  }
+
+  section img {
+    height: 250px; /* o el alto que quieras */
+    object-fit: cover; /* recorta para mantener proporción */
+    aspect-ratio: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /*---------------- Footer --------------------*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    padding-bottom: 2rem;
+  }
+
+  footer p {
+    margin: auto;
+  }
+
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .main table {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #e94b8a22;
+  }
+}
+
+/* Contenedor de las secciones de pilates */
+.pilates-secciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.pilates-bloque {
+  flex: 1 1 300px;
+  background: var(--primary-color-light-2);
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #e94b8a22;
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.pilates-bloque h3 {
+  color: var(--primary-color-dark);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.pilates-bloque p {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.pilates-bloque img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px #e94b8a22;
 }

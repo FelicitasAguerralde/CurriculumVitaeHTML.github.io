@@ -15,11 +15,13 @@ function verificar() {
     let captchaValue = (captchaInput.value * 1); 
     if (ramdom === captchaValue) {
         mensajeCaptcha.innerHTML = "El código ingresado es correcto. Haga click en Enviar Formulario";
+        mensajeCaptcha.className = "mensaje-correcto";
         document.querySelector(".botonera").classList.remove("oculto");
         
     }
     else {
         mensajeCaptcha.innerHTML = "El código ingresado es incorrecto. Por favor, vuelva a intentarlo.";
+        mensajeCaptcha.className = "mensaje-incorrecto";
         console.log(captchaValue);
 }
 }
